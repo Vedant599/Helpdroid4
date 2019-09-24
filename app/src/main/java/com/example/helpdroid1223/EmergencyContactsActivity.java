@@ -6,9 +6,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -20,9 +23,10 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
-public class EmergencyContactsActivity extends AppCompatActivity {
+public class EmergencyContactsActivity extends AppCompatActivity implements LocationListener {
     public ImageButton panic;
     private FusedLocationProviderClient client;
+    private LocationManager locationManager;
     String loc;
     int permission_check1,permission_check3,permission_check2;
     final private int request_code=0;
@@ -34,9 +38,9 @@ public class EmergencyContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emergency_contacts);
         client = LocationServices.getFusedLocationProviderClient(this);
-
+        locationManager =(LocationManager) getSystemService(Context.LOCATION_SERVICE);
         panic = (ImageButton) findViewById(R.id.panicbtn);
-        panic.setOnClickListener(new View.OnClickListener() {
+        panic.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                  permission_check1 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.CALL_PHONE);
@@ -96,13 +100,15 @@ public class EmergencyContactsActivity extends AppCompatActivity {
 
         int permission_check3 = ContextCompat.checkSelfPermission(this,Manifest.permission.ACCESS_FINE_LOCATION);
         if(permission_check3==PackageManager.PERMISSION_GRANTED) {
-            client.getLastLocation().addOnSuccessListener(EmergencyContactsActivity.this, new OnSuccessListener<Location>() {
+          /*  client.getLastLocation().addOnSuccessListener(EmergencyContactsActivity.this, new OnSuccessListener<Location>() {
                 @Override
                 public void onSuccess(Location location) {
                      loc=location.toString();
 
                 }
-            });
+            });*/
+          Location location =locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
+          onLocationChanged(location);
         }
         else
         {
@@ -115,7 +121,7 @@ public class EmergencyContactsActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        Toast.makeText(this, "Message Sent", Toast.LENGTH_SHORT).show();
+
         switch(requestCode)
         {
 
@@ -148,5 +154,27 @@ public class EmergencyContactsActivity extends AppCompatActivity {
                     Toast.makeText(this, "You Dont Have Permission to access location", Toast.LENGTH_SHORT).show();
                 }
         }
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        double longitude = location.getLongitude();
+        double lattitude = location.getLatitude();
+        loc= "longitude"+longitude+" lattitude"+lattitude;
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
     }
 }
