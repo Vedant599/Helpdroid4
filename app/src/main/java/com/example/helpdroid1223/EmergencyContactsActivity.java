@@ -109,6 +109,7 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
             });*/
           Location location =locationManager.getLastKnownLocation(locationManager.NETWORK_PROVIDER);
           onLocationChanged(location);
+            Toast.makeText(this, "HI", Toast.LENGTH_SHORT).show();
         }
         else
         {
