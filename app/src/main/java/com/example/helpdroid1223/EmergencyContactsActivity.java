@@ -14,6 +14,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.ImageButton;
@@ -43,6 +44,7 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
         panic.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                  permission_check1 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.CALL_PHONE);
                  permission_check2=ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.SEND_SMS);
                  permission_check3 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.ACCESS_FINE_LOCATION);
@@ -154,6 +156,7 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
                 {
                     Toast.makeText(this, "You Dont Have Permission to access location", Toast.LENGTH_SHORT).show();
                 }
+
         }
     }
 
