@@ -82,8 +82,8 @@ public class NavigationDrawerActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.Reset_Password) {
+            startActivity(new Intent(NavigationDrawerActivity.this,ChangePassword.class));
         }if (id == R.id.action_Fsai) {
            startActivity(new Intent(NavigationDrawerActivity.this,AboutFsai.class));
         }if (id == R.id.Us) {
@@ -109,7 +109,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 startActivity(intent1);
 
         } else if (id == R.id.nav_tools) {
-
+            startActivity(new Intent(NavigationDrawerActivity.this,YouTubeActivity.class));
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -158,7 +158,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 @Override
                 public void onResults(Bundle results) {
                     List<String> result_of_speech=results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-                    processResult(result_of_speech.get(0));
+                    processResult(result_of_speech.get(1));
                 }
 
                 @Override
@@ -175,12 +175,17 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
     private void processResult(String command) {
         command= command.toLowerCase();
-        if(command.contains("help"))
-        {
-            if(command.contains("fire"))
-            {
+        if(command.contains("help")) {
+            if (command.contains("fire")) {
                 Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(NavigationDrawerActivity.this,EmergencyContactsActivity.class));
+                startActivity(new Intent(NavigationDrawerActivity.this, EmergencyContactsActivity.class));
+
+            } else {
+                if (command.contains("ambulance")) {
+                    Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(NavigationDrawerActivity.this, EmergencyContactsAmbulanceActivity.class));
+
+                }
             }
         }
     }

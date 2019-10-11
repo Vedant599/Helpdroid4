@@ -216,6 +216,7 @@ public class Login extends AppCompatActivity {
                 if (task.isSuccessful()) {
 
                     progressDialog.dismiss();
+                    startActivity(new Intent(Login.this, NavigationDrawerActivity.class));
 
 //finish();
 

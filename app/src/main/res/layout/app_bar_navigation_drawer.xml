@@ -22,7 +22,7 @@
 
     <include
         layout="@layout/content_navigation_drawer"
-        app:layout_anchor="@+id/imageButton"
+
         app:layout_anchorGravity="bottom|center" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -33,14 +33,5 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_stat_name" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:padding="10dp"
-        android:scaleType="fitXY"
-        android:layout_gravity="center_horizontal|center_vertical"
-        app:srcCompat="@drawable/user"
-        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
