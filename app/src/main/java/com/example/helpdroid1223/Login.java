@@ -103,7 +103,7 @@ public class Login extends AppCompatActivity {
 
             finish();
 
-            startActivity(new Intent(Login.this, UserHomePage.class)); //Here start activity is very important since without start we cannot jump to the next activity...
+           // startActivity(new Intent(Login.this, UserHomePage.class)); //Here start activity is very important since without start we cannot jump to the next activity...
 
         }
 
@@ -263,11 +263,11 @@ startActivity(new Intent(Login_Student.this, Student_Home_page.class));*/
 
 //finish();
 
-            Intent intent = new Intent(Login.this, UserHomePage.class);
+    //        Intent intent = new Intent(Login.this, UserHomePage.class);
 
 //Here FN is my string...
 
-            startActivity(intent);
+            //startActivity(intent);
 
         }else{
 

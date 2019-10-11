@@ -76,7 +76,6 @@ import java.util.List;
 public class Register extends AppCompatActivity {
 
 
-
     private TextView heading;
 
     private EditText FN;
@@ -111,7 +110,7 @@ public class Register extends AppCompatActivity {
 
     private ImageView imageViewProPic;
 
-    private static int PICK_IMAGE=123;
+    private static int PICK_IMAGE = 123;
 
     Uri imagePath; //Uri - Unique Resource Identifier...
 
@@ -120,24 +119,21 @@ public class Register extends AppCompatActivity {
     private FirebaseUser firebaseUser;
 
 
-
     @Override
 
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-        if(requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData()!=null){
+        if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null) {
 
             imagePath = data.getData();
 
-            try{
+            try {
 
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagePath);
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagePath);
 
                 imageViewProPic.setImageBitmap(bitmap);
 
-            }
-
-            catch(IOException e){
+            } catch (IOException e) {
 
                 e.printStackTrace();
 
@@ -150,11 +146,9 @@ public class Register extends AppCompatActivity {
     }
 
 
-
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
-
 
 
         super.onCreate(savedInstanceState);
@@ -170,7 +164,6 @@ public class Register extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         firebaseStorage = FirebaseStorage.getInstance();
-
 
 
         storageReference = firebaseStorage.getReference();
@@ -197,12 +190,11 @@ spstd.setOnItemSelectedListener(this);*/
 
                 intent.setAction(Intent.ACTION_GET_CONTENT);
 
-                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE);
+                startActivityForResult(Intent.createChooser(intent, "Select Image"), PICK_IMAGE);
 
             }
 
         });
-
 
 
         btn_Register.setOnClickListener(new View.OnClickListener() {
@@ -211,27 +203,27 @@ spstd.setOnItemSelectedListener(this);*/
 
             public void onClick(View view) {
 
-                if(check()){
+                if (check()) {
 
                     String user_Email = Email.getText().toString().trim();
 
                     String user_Password = Password.getText().toString().trim();
 
-                    firebaseAuth.createUserWithEmailAndPassword(user_Email,user_Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    firebaseAuth.createUserWithEmailAndPassword(user_Email, user_Password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
                         @Override
 
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()) {
 
                                 sendEmailVerification();
 
                                 /*Toast.makeText(Register_Student.this,"Registration successful",Toast.LENGTH_SHORT).show();*/
 
-                            }else{
+                            } else {
 
-                                Toast.makeText(Register.this,"Registration Unsuccessful",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register.this, "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
 
 /*Intent intent = new Intent(Register_Student.this,Login_Student.class);
 
@@ -240,7 +232,6 @@ startActivity(intent);
 Register_Student.this.finish();*/
 
                             }
-
 
 
                         }
@@ -252,7 +243,6 @@ Register_Student.this.finish();*/
             }
 
         });
-
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -273,87 +263,86 @@ Register_Student.this.finish();*/
 
     }
 
-    private void setUiId(){
+    private void setUiId() {
 
-        FN = (EditText)findViewById(R.id.et_FN);
+        FN = (EditText) findViewById(R.id.et_FN);
 
-        LN = (EditText)findViewById(R.id.et_LN);
+        LN = (EditText) findViewById(R.id.et_LN);
 
-        Email = (EditText)findViewById(R.id.et_Email);
+        Email = (EditText) findViewById(R.id.et_Email);
 
-        Password = (EditText)findViewById(R.id.et_password);
+        Password = (EditText) findViewById(R.id.et_password);
 
-        gender = (RadioGroup)findViewById(R.id.radioGroup);
+        gender = (RadioGroup) findViewById(R.id.radioGroup);
 
         std = (TextView) findViewById(R.id.et_std);
 
-        dob = (TextView)findViewById(R.id.et_dob);
+        dob = (TextView) findViewById(R.id.et_dob);
 
-        imageViewProPic = (ImageView)findViewById(R.id.imProfile);
+        imageViewProPic = (ImageView) findViewById(R.id.imProfile);
 
-        btn_Register = (Button)findViewById(R.id.btn_Register);
+        btn_Register = (Button) findViewById(R.id.btn_Register);
 
-        login = (Button)findViewById(R.id.btn_login);
+        login = (Button) findViewById(R.id.btn_login);
 
-        imageViewProPic = (ImageView)findViewById(R.id.imProfile);
-
+        imageViewProPic = (ImageView) findViewById(R.id.imProfile);
 
 
     }
 
-    private boolean check(){
+    private boolean check() {
 
-        boolean result=false;
+        boolean result = false;
 
-        String userName_first=FN.getText().toString();
+        String userName_first = FN.getText().toString();
 
-        String userName_last=LN.getText().toString();
+        String userName_last = LN.getText().toString();
 
-        String userEmail=Email.getText().toString();
+        String userEmail = Email.getText().toString();
 
-        String DOB=dob.getText().toString();
+        String DOB = dob.getText().toString();
 
-        if(userName_first.isEmpty()){
+        if (userName_first.isEmpty()) {
 
-            Toast.makeText(this,"Please enter the first name",Toast.LENGTH_SHORT).show();
-
-            return result;
-
-        }
-
-        if(userName_last.isEmpty()){
-
-            Toast.makeText(this,"Please enter the last name",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter the first name", Toast.LENGTH_SHORT).show();
 
             return result;
 
         }
 
-        if(userEmail.isEmpty()){
+        if (userName_last.isEmpty()) {
 
-            Toast.makeText(this,"Please enter the email-address",Toast.LENGTH_SHORT).show();
-
-            return result;
-
-        }
-
-        if(DOB.isEmpty()){
-
-            Toast.makeText(this,"Please enter the date of birth",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter the last name", Toast.LENGTH_SHORT).show();
 
             return result;
 
         }
 
-        if(imagePath==null){
+        if (userEmail.isEmpty()) {
 
-            Toast.makeText(this,"Please select the image...",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter the email-address", Toast.LENGTH_SHORT).show();
 
             return result;
 
         }
 
-        result=true;
+        if (DOB.isEmpty()) {
+
+            Toast.makeText(this, "Please enter the date of birth", Toast.LENGTH_SHORT).show();
+
+            return result;
+
+        }
+
+        if (imagePath == null) {
+
+            Toast.makeText(this, "Please select the image...", Toast.LENGTH_SHORT).show();
+
+            return result;
+
+        }
+
+        result = true;
 
         return result;
 
@@ -367,7 +356,7 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
 
 }*/
 
-    private String getRadioText(){
+    private String getRadioText() {
 
         int radioId = gender.getCheckedRadioButtonId();
 
@@ -378,12 +367,11 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
     }
 
 
-
-    private void sendEmailVerification(){
+    private void sendEmailVerification() {
 
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
-        if(firebaseUser!=null){
+        if (firebaseUser != null) {
 
             firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
 
@@ -391,11 +379,11 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
 
                 public void onComplete(@NonNull Task<Void> task) {
 
-                    if(task.isSuccessful()){
+                    if (task.isSuccessful()) {
 
                         uploadUserData();
 
-                        Toast.makeText(Register.this,"Successfully Registered.Verification email sent",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "Successfully Registered.Verification email sent", Toast.LENGTH_SHORT).show();
 
                         firebaseAuth.signOut();
 
@@ -413,9 +401,9 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
 
                         startActivity(intent);
 
-                    }else{
+                    } else {
 
-                        Toast.makeText(Register.this,"Network problem",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "Network problem", Toast.LENGTH_SHORT).show();
 
                     }
 
@@ -428,8 +416,7 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
     }
 
 
-
-    private void uploadUserData(){
+    private void uploadUserData() {
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -453,7 +440,7 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
 
             public void onFailure(@NonNull Exception e) {
 
-                Toast.makeText(Register.this,"Unsuccessfull to uploaded image...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "Unsuccessfull to uploaded image...", Toast.LENGTH_SHORT).show();
 
             }
 
@@ -463,25 +450,24 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
 
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                Toast.makeText(Register.this,"Successfully uploaded image...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "Successfully uploaded image...", Toast.LENGTH_SHORT).show();
 
             }
 
         });
 
-        UserProfile userProfile = new UserProfile(FN.getText().toString(),LN.getText().toString(),Email.getText().toString(),std.getText().toString(),dob.getText().toString(),getRadioText());
+        //UserProfile userProfile = new UserProfile(FN.getText().toString(),LN.getText().toString(),Email.getText().toString(),std.getText().toString(),dob.getText().toString(),getRadioText());
 
-        databaseReference./*child(firebaseUser.getUid()).*/setValue(userProfile);
+        //databaseReference./*child(firebaseUser.getUid()).*/setValue(userProfile);
 
     }
-
 
 
     @Override
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
 
             case android.R.id.home:
 
@@ -490,9 +476,9 @@ spcntcode.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_spinn
         }
 
 
-
         return super.onOptionsItemSelected(item);
 
     }
+}
 
 
