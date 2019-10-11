@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.helpdroid1223.AboutFsai">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="FIRE &amp; SECURITY ASSOCIATION OF INDIA (FSAI) is a non-profit organization established in 2002 representing the Fire Protection, Life Safety, Security, Building Automation, Loss Prevention and Risk Management domains. Its primary aims and objectives are to:"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="18sp"
+                android:gravity="start|top"
+                android:text="1. Foster a spirit of safe living among all citizens of India and inculcate a proactive mind-set towards safety and security at all times"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+
+            <TextView
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="18sp"
+                android:gravity="start|top"
+                android:text="2. Promote and advance the use of fire safety and security systems."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+
+            <TextView
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="3. Develop fire safety and security engineering education and awareness."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="4. Maintain high ethical standards amongst its members."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/editText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="FSAI aims to work closely with the Government and all other stakeholders to enable the Indian Fire and Security industry to reach global pre-eminence with better regulatory framework.
+
+A recent report titled India Fire Safety Equipment Market Forecast &amp; Opportunities, 2017 anticipates that the Fire Safety equipment market in India by 2020 shall cross USD 9 Billion (approx. INR. 48,000 Crore). A similar report India Electronic Security Equipment Market 2017 estimates the total sales of electronic security equipment to surpass USD 2.5 Billion (approx. INR 13,000 Crore) by 2020. FSAI represents the interests of this industry with an overarching commitment to enhance the safety and security of the citizens of India."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/editText6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="CODE OF ETHICS"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="Fire Safety and Security systems with integrating aspects of Life Safety along with their service, is worthy of the highest levels of professionalism.
+
+Members will strive at all times to deliver products and services in accordance with the highest levels of professionalism
+
+Members will balance the right to inform the public of noteworthy issues with the rights of privacy of those we interact with. At all times, members will maintain an altruistic or selfless concern for the welfare of others. Members will not use any business practice, which violates any state, federal, or international law, rule or regulation. In all interactions with Fire Safety and Security related activity, or enrooted, members shall at all times exercise and follow noteworthy safety practices. Fire Safety and Security products and systems providers should always be considered an asset to the communities around them."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/editText7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="FSAI ACHIEVES ITS OBJECTIVES BY FOLLOWING 4 STRATEGIES"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="Partner with the Central and State Government bodies in formulation and implementation of safety and security policies."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="Encourage members to uphold world class quality standards.
+"
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="Expand the quality and quantity of the talent pool needed for the industry."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <TextView
+                android:id="@+id/editText12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:textSize="18sp"
+                android:text="Continuous engagement with all member companies and stakeholders to device strategies and achieve shared aspirations for the industry and the country in rural urban development planning and nation building. Partnership with members."
+                tools:layout_editor_absoluteX="78dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/contact_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Contacts of FSAI"
+        android:textSize="20sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

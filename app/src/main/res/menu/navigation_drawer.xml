@@ -5,5 +5,13 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        app:showAsAction="never" /> <item
+        android:id="@+id/action_Fsai"
+        android:orderInCategory="100"
+        android:title="About_Fsai"
+        app:showAsAction="never" /> <item
+        android:id="@+id/Us"
+        android:orderInCategory="100"
+        android:title="About Us"
         app:showAsAction="never" />
 </menu>

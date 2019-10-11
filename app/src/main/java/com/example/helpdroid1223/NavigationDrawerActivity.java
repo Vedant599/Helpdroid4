@@ -5,6 +5,9 @@ import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import android.speech.RecognitionListener;
+import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.view.View;
 
 import androidx.core.view.GravityCompat;
@@ -20,21 +23,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class NavigationDrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    public SpeechRecognizer speechRecognizer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        InitSpeechRecognizer();
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(NavigationDrawerActivity.this,Contacts.class));
+                //startActivity(new Intent(NavigationDrawerActivity.this,Contacts.class));
+                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+                intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS,1);
+                speechRecognizer.startListening(intent);
             }
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -73,6 +84,10 @@ public class NavigationDrawerActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }if (id == R.id.action_Fsai) {
+           startActivity(new Intent(NavigationDrawerActivity.this,AboutFsai.class));
+        }if (id == R.id.Us) {
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
@@ -104,5 +119,69 @@ public class NavigationDrawerActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    private void InitSpeechRecognizer() {
+        if(SpeechRecognizer.isRecognitionAvailable(this))
+        {
+            speechRecognizer=SpeechRecognizer.createSpeechRecognizer(this);
+            speechRecognizer.setRecognitionListener(new RecognitionListener() {
+                @Override
+                public void onReadyForSpeech(Bundle params) {
+
+                }
+
+                @Override
+                public void onBeginningOfSpeech() {
+
+                }
+
+                @Override
+                public void onRmsChanged(float rmsdB) {
+
+                }
+
+                @Override
+                public void onBufferReceived(byte[] buffer) {
+
+                }
+
+                @Override
+                public void onEndOfSpeech() {
+
+                }
+
+                @Override
+                public void onError(int error) {
+
+                }
+
+                @Override
+                public void onResults(Bundle results) {
+                    List<String> result_of_speech=results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+                    processResult(result_of_speech.get(0));
+                }
+
+                @Override
+                public void onPartialResults(Bundle partialResults) {
+
+                }
+
+                @Override
+                public void onEvent(int eventType, Bundle params) {
+
+                }
+            });
+        }}
+
+    private void processResult(String command) {
+        command= command.toLowerCase();
+        if(command.contains("help"))
+        {
+            if(command.contains("fire"))
+            {
+                Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(NavigationDrawerActivity.this,EmergencyContactsActivity.class));
+            }
+        }
     }
 }
