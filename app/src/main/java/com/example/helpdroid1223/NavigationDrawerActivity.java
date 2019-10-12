@@ -87,6 +87,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
         }if (id == R.id.action_Fsai) {
            startActivity(new Intent(NavigationDrawerActivity.this,AboutFsai.class));
         }if (id == R.id.Us) {
+            startActivity(new Intent(NavigationDrawerActivity.this,AboutUs.class));
             return true;
         }
 
@@ -158,7 +159,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
                 @Override
                 public void onResults(Bundle results) {
                     List<String> result_of_speech=results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-                    processResult(result_of_speech.get(1));
+                    processResult(result_of_speech.get(0));
                 }
 
                 @Override

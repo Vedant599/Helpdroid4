@@ -20,6 +20,16 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome To FSAI Helpdroid"
+        android:textSize="20sp"
+        android:textStyle="italic"
+
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"/>
+
     <include
         layout="@layout/content_navigation_drawer"
 
@@ -32,6 +42,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_stat_name" />
+
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

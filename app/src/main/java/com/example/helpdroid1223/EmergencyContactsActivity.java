@@ -40,14 +40,19 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
         setContentView(R.layout.activity_emergency_contacts);
         client = LocationServices.getFusedLocationProviderClient(this);
         locationManager =(LocationManager) getSystemService(Context.LOCATION_SERVICE);
-        //panic = (ImageButton) findViewById(R.id.panicbtn);
-        permission_check1 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.CALL_PHONE);
-        permission_check2=ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.SEND_SMS);
-        permission_check3 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.ACCESS_FINE_LOCATION);
+        panic = (ImageButton) findViewById(R.id.imageButton);
+        panic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                permission_check1 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.CALL_PHONE);
+                permission_check2=ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.SEND_SMS);
+                permission_check3 = ContextCompat.checkSelfPermission(EmergencyContactsActivity.this,Manifest.permission.ACCESS_FINE_LOCATION);
 
 
-        mycall();
-        mymessage();
+                mycall();
+                mymessage();
+            }
+        });
 
     }
 
