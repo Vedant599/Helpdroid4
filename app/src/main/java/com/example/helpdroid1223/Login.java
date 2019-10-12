@@ -103,7 +103,7 @@ public class Login extends AppCompatActivity {
 
             finish();
 
-           // startActivity(new Intent(Login.this, UserHomePage.class)); //Here start activity is very important since without start we cannot jump to the next activity...
+           startActivity(new Intent(Login.this,NavigationDrawerActivity.class));
 
         }
 
