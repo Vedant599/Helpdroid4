@@ -75,6 +75,16 @@ public class Login extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
+        //Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        //Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+        if (user != null) {
+            Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(Login.this, NavigationDrawerActivity.class));
+            //finish();
+
+        }
+
         Email = (EditText) findViewById(R.id.et_email);
 
         Password = (EditText) findViewById(R.id.et_password);
@@ -91,21 +101,9 @@ public class Login extends AppCompatActivity {
 
         Info.setText("Number of attempts remaining are: 5");
 
+        firebaseAuth=FirebaseAuth.getInstance();
 
-
-//Firebase functions...
-
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-
-        if (user != null) {
-
-            finish();
-
-           startActivity(new Intent(Login.this,NavigationDrawerActivity.class));
-
-        }
+//Firebase functions..
 
 
 

@@ -23,7 +23,7 @@ public class Contacts extends AppCompatActivity {
     public Button Add;
     private int contact;
     FirebaseDatabase db=FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference =db.getReference("Contacts");
+    DatabaseReference databaseReference =db.getReference();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

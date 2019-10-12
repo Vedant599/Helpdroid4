@@ -16,6 +16,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -111,8 +113,12 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_tools) {
             startActivity(new Intent(NavigationDrawerActivity.this,YouTubeActivity.class));
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_Log_out) {
 
+
+           FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(NavigationDrawerActivity.this,Login.class));
+            //finish();
         } else if (id == R.id.nav_send) {
 
         }

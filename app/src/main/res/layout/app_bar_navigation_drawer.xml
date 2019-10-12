@@ -44,7 +44,7 @@
             android:gravity="center_horizontal"
             android:textColor="@color/colorRed"
             android:text="Welcome To FSAI Helpdroid"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
