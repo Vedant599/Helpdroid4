@@ -52,7 +52,7 @@ public class EmergencyContactsAmbulanceActivity extends AppCompatActivity implem
     }
 
     private void mycall() {
-        final String number ="+919324810612";
+        final String number ="9324810612";
         permission_check1 = ContextCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE);
         if(permission_check1==PackageManager.PERMISSION_GRANTED) {
 

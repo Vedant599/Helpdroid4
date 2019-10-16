@@ -182,18 +182,21 @@ public class NavigationDrawerActivity extends AppCompatActivity
 
     private void processResult(String command) {
         command= command.toLowerCase();
-        if(command.contains("help")) {
-            if (command.contains("fire")) {
-                Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(NavigationDrawerActivity.this, EmergencyContactsActivity.class));
+        if(command.contains("help"))
+         {
+             if(command.contains("fire")) {
+                 Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+                 startActivity(new Intent(NavigationDrawerActivity.this, EmergencyContactsActivity.class));
 
-            } else {
-                if (command.contains("ambulance")) {
-                    Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(NavigationDrawerActivity.this, EmergencyContactsAmbulanceActivity.class));
+             }
+             else {
+                 if(command.contains("ambulance")) {
+                     Toast.makeText(this, "Hello", Toast.LENGTH_SHORT).show();
+                     startActivity(new Intent(NavigationDrawerActivity.this, EmergencyContactsAmbulanceActivity.class));
+                 }
+             }
 
-                }
-            }
+
         }
     }
 }

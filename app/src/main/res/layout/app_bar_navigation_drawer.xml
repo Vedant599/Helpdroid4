@@ -72,7 +72,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/ic_stat_name" />
+
+        app:srcCompat="@drawable/ic_mic_black_24dp"
+        android:tint="#FFFF"
+        />
 
 
 
