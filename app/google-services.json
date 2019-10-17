@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "968370315989",
-    "firebase_url": "https://fsai123.firebaseio.com",
-    "project_id": "fsai123",
-    "storage_bucket": "fsai123.appspot.com"
+    "project_number": "481135175791",
+    "firebase_url": "https://helpdroid-a5979.firebaseio.com",
+    "project_id": "helpdroid-a5979",
+    "storage_bucket": "helpdroid-a5979.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:968370315989:android:a860618ef5163ed79cb85c",
+        "mobilesdk_app_id": "1:481135175791:android:e1be470586d9c89e78059a",
         "android_client_info": {
           "package_name": "com.example.helpdroid"
         }
       },
       "oauth_client": [
         {
-          "client_id": "968370315989-l1tn37msh7la8ps26h0ohe1udvperonc.apps.googleusercontent.com",
+          "client_id": "481135175791-hv16fh4b8195squq0rnselaeabfh2987.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.helpdroid",
-            "certificate_hash": "b2a889f5ed545b02b2537f05209a32a4076fb8cf"
+            "certificate_hash": "f3b7895ce4b282c19574eacf52973963ba456bab"
           }
         },
         {
-          "client_id": "968370315989-dc6uppamp8inh8ro5ttlboh8vh31342f.apps.googleusercontent.com",
+          "client_id": "481135175791-sess7c74croa824ipcl0f60pj641d9vv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCx5iyiEGDwNkUdehp9qOTWbQ5Jg7lLJrM"
+          "current_key": "AIzaSyCvoPjz5xZ7o9c8F_-ZCiJ1OCBROSLUJyA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "968370315989-dc6uppamp8inh8ro5ttlboh8vh31342f.apps.googleusercontent.com",
+              "client_id": "481135175791-sess7c74croa824ipcl0f60pj641d9vv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -45,27 +45,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:968370315989:android:18ea98a63672e2349cb85c",
+        "mobilesdk_app_id": "1:481135175791:android:ce0fdff16630b38978059a",
         "android_client_info": {
           "package_name": "com.example.helpdroid1223"
         }
       },
       "oauth_client": [
         {
-          "client_id": "968370315989-dc6uppamp8inh8ro5ttlboh8vh31342f.apps.googleusercontent.com",
+          "client_id": "481135175791-sess7c74croa824ipcl0f60pj641d9vv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCx5iyiEGDwNkUdehp9qOTWbQ5Jg7lLJrM"
+          "current_key": "AIzaSyCvoPjz5xZ7o9c8F_-ZCiJ1OCBROSLUJyA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "968370315989-dc6uppamp8inh8ro5ttlboh8vh31342f.apps.googleusercontent.com",
+              "client_id": "481135175791-sess7c74croa824ipcl0f60pj641d9vv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
