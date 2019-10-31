@@ -22,22 +22,32 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Delhi / Lucknow / Chandigarh Chapter"
+                    android:textColor="@android:color/black"
+                    android:text="Vedant"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:typeface="serif"
                     android:autoLink="phone"
                     />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email :  delhichapter@fsai.in"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:text="Email :  dynamicvedant@gmail.com"
+                    android:textSize="30sp"
                     android:autoLink="phone"
                     />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
                     android:autoLink="phone"
-                    android:text="Contact : +91 63742 12148" />
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    android:text="Contact : +91 9324810612" />
 
             </LinearLayout>
 
@@ -50,18 +60,27 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Bangalore / Mangalore / Kochi Chapter" />
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="Varun" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email : bengaluruchapter@fsai.in" />
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="Email : varun.magotra11@yahoo.in" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:autoLink="phone"
-                    android:text="Contact :  +91 63742 12143" />
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="Contact :  +91 8825003922" />
 
             </LinearLayout>
 
@@ -73,18 +92,27 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Mumbai / Nagpur Chapter" />
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:text="Rishita" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:text="Email : rishitamote@gmail.com" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Email : mumbaichapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
                     android:autoLink="phone"
-                    android:text="Contact : +91 63742 12145" />
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:text="Contact : +91 8087714020" />
 
             </LinearLayout>
 
@@ -92,193 +120,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="20dp">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Chennai/ Coimbatore Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email : chennaichapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact : +91 63742 12151" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Kolkata / Bhubhaneshwar / Raipur Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email :  kolkatachapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact :  +91 63010 82017" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Hyderabad / Vishakhapatnam / Amaravathi Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email :  hyderabadchapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact :  +91 9948424442" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Pune / Nashik Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email :punechapter@fsai.in " />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact : +91 6374212140 " />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Indore / Bhopal Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email :  indorechapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact :  +91 63742 12141" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Gujarat &amp; Bhopal Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email : gujarat.chapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact : +91 6374212147" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Goa Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email : goachapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact : +91 6374212144" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="20dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Jaipur Chapter" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email : jaipurchapter@fsai.in" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:autoLink="phone"
-                    android:text="Contact : +91 6374212152" />
-
-            </LinearLayout>
+                android:layout_marginTop="20dp"/>
 
         </LinearLayout>
 

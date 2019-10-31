@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorOrange"
+    android:background="@android:color/holo_red_light"
     tools:context="com.example.helpdroid1223.EmergencyContactsAmbulanceActivity">
 
     <TextView
@@ -12,9 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ambulance Called"
+        android:textStyle="bold"
         android:textSize="30sp"
-        android:textColor="@color/colorRed"
-        android:background="#FFFF"
+        android:textColor="@android:color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

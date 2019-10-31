@@ -21,18 +21,20 @@ public class Contacts extends AppCompatActivity {
     public RadioButton rel;
     public Button Add;
     private int contact;
-    FirebaseDatabase db=FirebaseDatabase.getInstance();
-    DatabaseReference databaseReference =db.getReference("Contacts");
+    public static DataBase dataBase[];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
+        dataBase =new DataBase[10];
+
+
         Name=(EditText)findViewById(R.id.edtName);
         Email=(EditText)findViewById(R.id.edtEmail);
         Phone=(EditText)findViewById(R.id.edtPhone);
         Relation=(RadioGroup)findViewById(R.id.radioGroup);
-        databaseReference =db.getReference();
-        contact=1;
+        contact=0;
         Add=(Button)findViewById(R.id.Addbtn);
         Add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,10 +45,10 @@ public class Contacts extends AppCompatActivity {
                 String Email1=Email.getText().toString().trim();
                 String Phone1=Phone.getText().toString().trim();
                 String Relation1=rel.getText().toString().trim();
-                DataBase dataBase =new DataBase(Name1,Email1,Phone1,Relation1);
-                databaseReference.child("Contact "+contact).setValue(dataBase);
+                dataBase[contact] =new DataBase(Name1,Email1,Phone1,Relation1);
                 contact++;
                 Toast.makeText(Contacts.this, "Data Entered", Toast.LENGTH_SHORT).show();
+                Toast.makeText (Contacts.this, "Add 2 more numbers", Toast.LENGTH_SHORT).show ();
                 Name.setText("");
                 Phone.setText("");
                 Email.setText("");

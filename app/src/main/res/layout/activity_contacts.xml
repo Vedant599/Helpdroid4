@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/colorOrange"
+    android:background="@android:color/holo_blue_dark"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Contacts">
@@ -11,9 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:text="WELCOME TO FSAI"
-        android:textColor="@color/colorRed"
+        android:textColor="@android:color/white"
+        android:text="WELCOME TO HELPDROID"
+        android:textColorHint="@android:color/white"
         android:textSize="30sp"
+        android:typeface="serif"
         app:layout_constraintBottom_toTopOf="@+id/edtName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +28,9 @@
         android:ems="13"
 
         android:inputType="textPersonName"
+        android:textColor="@android:color/white"
         android:hint="Name"
+        android:textColorHint="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +43,7 @@
         android:layout_height="wrap_content"
         android:ems="13"
         android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/white"
         android:hint="Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,8 +56,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="13"
+        android:textColorHint="@android:color/white"
         android:inputType="phone"
         android:hint="Phone Number"
+        android:textColorHighlight="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +82,7 @@
             android:id="@+id/rbFather"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:textColor="@android:color/white"
             android:layout_weight="1"
             android:text="Father" />
 
@@ -83,13 +91,15 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="mother" />
+            android:textColor="@android:color/white"
+            android:text="Mother" />
 
         <RadioButton
             android:id="@+id/rbHusband"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:textColor="@android:color/white"
             android:text="Husband" />
     </RadioGroup>
 
@@ -98,6 +108,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

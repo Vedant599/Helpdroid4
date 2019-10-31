@@ -14,7 +14,6 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.ImageButton;
@@ -22,9 +21,9 @@ import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnSuccessListener;
 
 public class EmergencyContactsActivity extends AppCompatActivity implements LocationListener {
+    public double latmy,longmy;
     public ImageButton panic;
     private FusedLocationProviderClient client;
     private LocationManager locationManager;
@@ -57,15 +56,15 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
     }
 
     private void mycall() {
-        final String number ="9324810612";
-        permission_check1 = ContextCompat.checkSelfPermission(this,Manifest.permission.CALL_PHONE);
-        if(permission_check1==PackageManager.PERMISSION_GRANTED) {
+        for(int i=0;i<3;i++) {
+            final String number = Contacts.dataBase[i].getPhone ();
+            permission_check1 = ContextCompat.checkSelfPermission (this, Manifest.permission.CALL_PHONE);
+            if (permission_check1 == PackageManager.PERMISSION_GRANTED) {
 
-            startActivity(new Intent(Intent.ACTION_CALL,Uri.parse("tel:"+number)));
-        }
-        else
-        {
-            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},1);
+                startActivity (new Intent (Intent.ACTION_CALL, Uri.parse ("tel:" + number)));
+            } else {
+                ActivityCompat.requestPermissions (this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+            }
         }
     }
 
@@ -94,6 +93,9 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
             SmsManager smsManager =SmsManager.getDefault();
             smsManager.sendTextMessage(number,null,message,null,null);
             Toast.makeText(this, "Message Sent", Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent (EmergencyContactsActivity.this,MapsActivity.class);
+            intent.putExtra ("Lat",(latmy));
+            intent.putExtra ("Long",(longmy));
         }}
 
     private String myLocation() {
@@ -165,6 +167,8 @@ public class EmergencyContactsActivity extends AppCompatActivity implements Loca
     public void onLocationChanged(Location location) {
         double longitude = location.getLongitude();
         double lattitude = location.getLatitude();
+        latmy=lattitude;
+        longmy=longitude;
         loc= "longitude"+longitude+" lattitude"+lattitude;
     }
 

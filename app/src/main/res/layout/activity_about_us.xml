@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorOrange1"
+    android:background="@android:color/white"
     android:padding="15dp"
     tools:context="com.example.helpdroid1223.AboutUs">
 
@@ -14,67 +14,57 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/fsai"/>
+        android:src="@drawable/helpdroid"/>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Developers : "
+        android:text="               HELP DROID "
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/colorRed"/>
+        android:textColor="@android:color/black"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Darsh "
+        android:text="Developers"
         android:layout_marginTop="15dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
         android:textSize="30sp"
         android:textStyle="bold"
-    android:textColor="@color/colorRed"/>
+    android:textColor="@android:color/black"/>
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prerak"
+        android:text="Varun"
         android:layout_marginTop="15dp"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:textColor="@color/colorRed"
+        android:textColor="@android:color/black"
         android:gravity="center_horizontal"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Priyav "
         android:layout_marginTop="15dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorRed"
-        android:gravity="center_horizontal"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rishi"
-        android:layout_marginTop="15dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorRed"
-        android:gravity="center_horizontal"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="Vedant"
-        android:layout_marginTop="15dp"
+        android:textColor="@android:color/black"
         android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorRed"
-        android:gravity="center_horizontal"/>
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="                   Rishita"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
 </LinearLayout>
